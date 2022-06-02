@@ -1,0 +1,43 @@
+###
+POST http://localhost:3000/Usuario
+Content-Type: application/json
+
+{
+    "correo": "lola@hotmail.com",
+    "clave":"bugs",
+    "nombre":"1234",
+    "pais":"USA",
+    "area":"TI",
+    "titulos":["Titulo1","Titulo2"],
+    "lenguajes":["C, C++, Java"],
+    "idiomas":[
+        {
+            "idioma": "Ingles",
+            "nivel": "Avanzado"},
+        {
+            "idioma":"Portugues",
+            "nivel":"Intermedio"
+        }]
+}
+
+### 
+PATCH http://localhost:3000/Usuario/616bcdc25f61cedc4316408b
+Content-Type: application/json
+
+{
+"idiomas":[{
+            "idioma": "Mandarin",
+            "nivel": "basico"},
+            {"idioma":"Italiano","nivel":"intermedio"}]
+}
+
+###
+GET http://localhost:3000/Usuarios_RH/carlos3245/cls1290
+
+###
+GET http://localhost:3000/Usuario/Rebejim@hotmail.com/jim3490
+
+###
+GET http://localhost:3000/Usuario
+###
+POST 

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.component.css">
+    
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mx-auto">
+                <!--Tarjeta Principal del LogIn-->
+                <div class="card">
+                    <!--Encabezado-->
+                    <div class="card-header">
+                        <img src="/assets/images/login-logo.png" class="logo" alt="MainLogo">
+                    </div>
+                    <!--Cuerpo-->
+                    <div class="card-body">
+                        <form class="form-group" (ngSubmit)="onSubmit()">
+                            <div class="row justify-content-center">
+                                <div class="col">
+                                    <label for="usuarioWeb">Usuario</label>
+                                    <input type="text" name="usuarioWeb" id="username"
+                                        [(ngModel)]="loginData.information.correo" 
+                                        placeholder="Digite su usuario">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row justify-content-center">
+                                <div class="col">
+                                    <label for="password">Contraseña</label>
+                                    <input type="password" name="password" 
+                                    [(ngModel)]="loginData.information.clave"
+                                        placeholder="Digite su contraseña">
+                                </div>
+                            </div>
+                            <br>
+                            <!--Mensaje de Error-->
+                            <div class="justify-content-center err">
+                                {{errorMSG}}
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-3">
+                                    <button class="btn login_btn">Ingresar</button>
+                                    
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-3">
+                                    <button class="btn reg_btn" (click)="goToForm()">Registro</button>
+                                    
+                                </div>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

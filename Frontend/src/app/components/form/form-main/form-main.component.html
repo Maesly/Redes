@@ -1,0 +1,116 @@
+<app-header></app-header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <p class="username"></p>
+        <div class="container-fluid">
+        </div>
+    </nav>
+    <div class="container" *ngIf="Form != false">
+        <div class="row">
+            <div class="col-md-4 mx-auto">
+                <!--Tarjeta Principal del Form-->
+                <div class="card-register">
+                    <!--Encabezado-->
+                    <div class="card-register-header">
+                        Información
+                    </div>
+                    <!--Cuerpo-->
+                    <div class="card-register-body">
+                        <form class="form-group" (ngSubmit)="onSubmit()">
+                            <div class="row justify-content-center">
+                                <div class="col">
+                                    <label for="usuarioWeb">Correo</label>
+                                    <input type="text" name="correo" id="correo"
+                                        placeholder="Digite su Correo"
+                                        [(ngModel)]="newUser.information.correo"
+                                        >
+                                </div>
+                                <div class="col">
+                                    <label for="usuarioWeb">Pais</label>
+                                    <input type="text" name="pais" id="pais"
+                                        placeholder="Digite su Pais"
+                                        [(ngModel)]="newUser.information.pais"
+                                        >
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row justify-content-center">
+                                <div class="col">
+                                    <label for="password">Nombre Completo</label>
+                                    <input type="text" name="nombre" 
+                                        placeholder="Digite Nombre Completo"
+                                        [(ngModel)]="newUser.information.nombre"
+                                    >
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row justify-content-center">
+                                <div class="col">
+                                    <label for="password">Area</label>
+                                    <input type="text" name="area" 
+                                        placeholder="Ejm: ATI, CE, AE"
+                                        [(ngModel)]="newUser.information.area"
+                                    >
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row justify-content-center">
+                                <div class="col">
+                                    <label for="exampleFormControlTextarea1">Titulos</label>
+                                    <input type="text" name="titulos" 
+                                        placeholder="Ejm: Titulo1, Titulo2"
+                                        [(ngModel)]="inputTitulos"
+                                    >
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row justify-content-center">
+                                <div class="col">
+                                    <label for="lenguajes">Lenguajes</label>
+                                    <input type="text" name="lenguajes" 
+                                        placeholder="Ejm: Lenguaje1, Lenguaje2"
+                                        [(ngModel)]="inputLenguajes"
+                                    >
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row justify-content-center">
+                                <div class="col">
+                                    <label for="exampleFormControlTextarea1">Idiomas</label>
+                                    <input type="text" name="idiomas" 
+                                        placeholder="Ejm: Ingles:Medio, Ruso:Avanzado"
+                                        [(ngModel)]="inputIdiomas"
+                                    >
+                                </div>
+                            </div>
+                            <br>        
+                            <div class="row justify-content-center">
+                                <div class="col">
+                                    <label for="password">Contraseña</label>
+                                    <input type="password" name="password" 
+                                        placeholder="Digite Contraseña"
+                                        [(ngModel)]="newUser.information.clave"
+                                    >
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group col-3 mx-auto">
+                                <button class="btn submit_btn">Registrar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

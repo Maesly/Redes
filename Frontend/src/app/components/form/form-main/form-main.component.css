@@ -1,0 +1,301 @@
+:root{
+
+    --color-primario:#f07a25;
+}
+
+body{
+
+    min-height: calc(100vh - 53.46px - 290.43px);
+    font-family: sans-serif;
+    background: linear-gradient(rgb(41, 41, 41),rgb(9, 16, 27));
+
+}
+/*Header Secundario*/
+.navbar{
+
+    padding: 20px 10px;
+    background-color: rgb(44, 43, 43);
+    height: 80.8px;
+   
+}
+
+.container{
+    margin-top: 20px;
+}
+
+/*Tarjetas de Clientes*/
+.card{
+    height: 165px;
+    width: 700px;
+    padding: 0px 0px;/*Nice Padding hack*/
+    margin-top: 50px;
+    margin: 20px;
+    /*background-color: rgba(44, 43, 43, 0.9);*/
+    background-color: rgba(44, 43, 43, 0.9);
+    color: #fff;
+    /*border: 2px solid #f07a25;*/
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px 1px #888888;
+    border-bottom: 0px;
+    
+}
+.card-body{
+    height: 10px;
+}
+
+/*Encabezado*/
+.card-header{
+    height: 30px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: rgba(44, 43, 43, 0.9);
+}
+/*Pie de las Tarjetas*/
+.card-footer{
+    
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin-left: -1px;
+    width: 700px;
+    height: 60px;
+    background-color: rgba(44, 43, 43, 1);
+    
+}
+
+/*Entrada de Busqueda*/
+.form-control{
+    
+    border-radius: 10px;
+    border: 2px solid #0b7e6b;
+    font-family: 'Crete Round', serif;
+    background-color: rgb(228, 228, 228);
+    width: 300px;
+}
+
+/*Botón de play*/
+.btnm-play{
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 70px;
+    background-color: #0b7e6b;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+    font-family: 'Crete Round', serif;
+    margin-left: 70px;
+   
+}
+
+/*Efecto de Botón de play*/
+.btnm-play:hover{
+    cursor: pointer;
+    background: #0b7e6b;
+    color: #000;
+    box-shadow: 0px 0px 10px 1px #0b7e6b;
+    font-family: 'Crete Round', serif;
+    
+}
+
+
+/*Delete Button*/
+.btnm-del{
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 70px;
+    background-color: #7e180b;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+    font-family: 'Crete Round', serif;
+    margin-left: 70px;
+    
+}
+
+/*Delete Button Effect*/
+.btnm-del:hover{
+    cursor: pointer;
+    background: #7e180b;
+    color: #000;
+    box-shadow: 0px 0px 10px 1px #7e180b;
+    font-family: 'Crete Round', serif;
+}
+
+/*Edit Button*/
+.btnm-edit{
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 70px;
+    background-color: #0b717e;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+    font-family: 'Crete Round', serif;
+    margin-left: 70px;
+    
+}
+
+/*Edit Button Effect*/
+.btnm-edit:hover{
+    cursor: pointer;
+    background: #0b717e;
+    color: #000;
+    box-shadow: 0px 0px 10px 1px #0b717e;
+    font-family: 'Crete Round', serif;
+}
+
+
+/*Edit Button*/
+.btnm-back{
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 130px;
+    background-color: #0b717e;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+    font-family: 'Crete Round', serif;
+    margin-left: 40px;
+    
+}
+
+/*Edit Button Effect*/
+.btnm-back:hover{
+    cursor: pointer;
+    background: #0b717e;
+    color: #000;
+    box-shadow: 0px 0px 10px 1px #0b717e;
+    font-family: 'Crete Round', serif;
+}
+
+
+
+.card .card-body h5{
+    font-size: 15px;
+    color: #fff;
+}
+
+.container{
+    min-height: 720px;
+}
+
+/*Título*/
+.card-header h5{
+    font-size: 20px;
+    font-family: 'Crete Round', serif;
+    color: #fff;
+    text-align: center;
+}
+
+/*Telefono*/
+.card-body h6{
+    color: #fff;
+    font-size: 17px;
+    font-family: 'Amiri', serif;
+    border-bottom: 1px solid #0b7e6b;
+    text-align: center;
+    
+}
+
+/*Descripción*/
+.card-body p{
+    color: #fff;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    
+}
+
+/*Pagination*/
+.my-pagination /deep/ .ngx-pagination .current {
+    background: #0b7e6b;
+    border-radius: 7px;
+    color: rgb(255, 255, 255);
+  }
+
+/*----------------AQUI--------------------*/
+
+/*Card Inputs*/
+.card-register input {
+    width: 100%;
+    margin-bottom: 20px;
+    
+}
+
+/*submit*/
+.submit_btn{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #0b7e6b;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    border-radius: 10px;
+    position: absolute;
+    left: calc(50% - 45px);
+    font-family: 'Crete Round', serif;
+}
+    
+.submit_btn:hover{
+    cursor: pointer;
+    background: #0b7e6b;
+    color: #000;
+    box-shadow: 0px 0px 20px 1px #0b7e6b;
+    font-family: 'Crete Round', serif;
+}
+
+/*User Label*/
+.username{
+    color: #0b547e;
+    font-family: Roboto, "sans-serif";
+    font-size: 1.4rem;
+}
+
+/*Card Register*/
+.card-register{
+    border: 2px solid #0b7e6b;
+    height: auto;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    background-color: rgba(44, 43, 43, 0.9);
+    color: #fff;
+    border-radius: 30px;
+    padding: 70px 0px;
+    box-shadow: 0px 0px 20px 1px #888888;
+
+}
+
+/*Encabezado*/
+.card-register-header{
+    height: 30px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: rgba(44, 43, 43, 0.9);
+    text-align: center;
+}
+
+/*Titulos de las Entradas*/
+.card-register label{
+    
+    color: #0b7e6b;
+    margin: 0;
+    padding: 0;
+    font-family: 'Crete Round', serif;
+}
+
+/*Inputs*/
+.card-register input[type="text"], .card-register input[type="password"] {
+    
+    border: none;
+    border-bottom: 1px solid #0b7e6b;
+    background: rgb(44, 43, 43);
+    outline: none;
+    height: 40px;
+    color: rgb(218, 218, 218);
+    font-size: 16px;
+    border-radius: 5px;
+    font-family: 'Crete Round', serif;
+}

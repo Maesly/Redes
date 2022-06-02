@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="rh-header.component.css">
+    <title>RH-Header</title>
+</head>
+
+<body>
+
+
+    <div class="container-fluid">
+
+        <div class="navbar nabvar-expand-lg">
+            
+            <h3 class="appName">Sistema</h3>
+            
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                <li>
+                    <a id="logout" style="cursor: pointer;color: #0b7e6b;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Exit</a>
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Cerrando sesión...</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    ¿Esta seguro de cerrar sesión?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btnm btn-secondary"
+                                        data-bs-dismiss="modal">Cancelar</button>&nbsp;
+                                    <button type="button" class="btnm btn-primary" (click)="logOut()" data-bs-dismiss="modal">Aceptar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

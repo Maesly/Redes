@@ -1,0 +1,210 @@
+<app-rh-header></app-rh-header>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="rh-main.component.css">
+    <title>ClientSelection</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <!--Input de Búsqueda-->
+            <button class="btnm1 btn-outline-success" (click)="getFilter1()">Usuarios de ATI</button>
+            <button class="btnm2 btn-outline-success" (click)="getFilter2()">Ingles Avanzado</button>
+            <button class="btnm3 btn-outline-success" (click)="getFilter3()">No ATI Titulos</button>
+            <button class="btnm btn-outline-success" (click)="goBack()">Lista General</button>
+        </div>
+    </nav>
+    <!--Contenedor de Usuarios Generales-->
+    <div class="container" *ngIf="userListControl != false">
+        <div class="row justify-content-center" >
+            <ng-container *ngFor="let obj of userList | paginate: {itemsPerPage: 8, currentPage: currentPg}">
+                <div class="card col-md-3">
+                    <div class="card-header">
+                        <h5 class="card-title">{{obj.nombre}}</h5>
+                    </div>
+                    <div class="card-body">
+                        
+                        <h6 class="card-subtitle mb-2">{{obj.correo}}</h6>
+                        <p class="card-text">{{obj.area}}</p>
+                        
+                    </div>
+                    <div class="card-footer">
+                        <div class="col-5 mx-auto">
+                            <button class="btnm btn-outline-success" (click)="userSubmit(obj)">Seleccionar</button>
+                        </div>
+                    </div>
+                </div>
+             
+            </ng-container>
+            
+        </div>
+
+    </div>
+
+    <!--Contenedor de Usuarios Filtro1-->
+    <div class="container" *ngIf="filterOneControl != false">
+        <div class="row justify-content-center" >
+            <ng-container *ngFor="let obj of unoList | paginate: {itemsPerPage: 8, currentPage: currentPg}">
+                <div class="card col-md-3">
+                    <div class="card-header">
+                        <h5 class="card-title">{{obj.nombre}}</h5>
+                    </div>
+                    <div class="card-body">
+                        
+                        <h6 class="card-subtitle mb-2"></h6>
+                        <p class="card-text">{{obj.area}}</p>
+                        
+                    </div>
+                    <div class="card-footer">
+                        <div class="col-5 mx-auto">
+                        </div>
+                    </div>
+                </div>
+             
+            </ng-container>
+            
+        </div>
+
+    </div>
+    <!--Contenedor de Usuarios Filtro2-->
+    <div class="container" *ngIf="filterTwoControl != false">
+        <div class="row justify-content-center" >
+            <ng-container *ngFor="let obj of dosList | paginate: {itemsPerPage: 8, currentPage: currentPg}">
+                <div class="card col-md-3">
+                    <div class="card-header">
+                        <h5 class="card-title">{{obj.nombre}}</h5>
+                    </div>
+                    <div class="card-body">
+                        
+                        <h6 class="card-subtitle mb-2">{{obj.pais}}</h6>
+                        <p class="card-text"></p>
+                        
+                    </div>
+                    <div class="card-footer">
+                        <div class="col-5 mx-auto">
+                        </div>
+                    </div>
+                </div>
+             
+            </ng-container>
+            
+        </div>
+
+    </div>
+    <!--Contenedor de Usuarios Filtro3-->
+    <div class="container" *ngIf="filterThreeControl != false">
+        <div class="row justify-content-center" >
+            <ng-container *ngFor="let obj of tresList | paginate: {itemsPerPage: 8, currentPage: currentPg}">
+                <div class="card col-md-3">
+                    <div class="card-header">
+                        <h5 class="card-title">{{obj.nombre}}</h5>
+                    </div>
+                    <div class="card-body">
+                        
+                        <h6 class="card-subtitle mb-2">{{obj.titulos}}</h6>
+                        <p class="card-text">{{obj.area}}</p>
+                        
+                    </div>
+                    <div class="card-footer">
+                        <div class="col-5 mx-auto">
+                        </div>
+                    </div>
+                </div>
+             
+            </ng-container>
+            
+        </div>
+
+    </div>
+
+
+    <!--Info Form-->
+
+    <div class="container" *ngIf="infoFormControl != false">
+        <div class="row">
+            <div class="col-md-4 mx-auto">
+                <!--Tarjeta Principal del Form-->
+                <div class="card-register">
+                    <!--Encabezado-->
+                    <div class="card-register-header">
+                        Información
+                    </div>
+                    <!--Cuerpo-->
+                    <div class="card-register-body">
+                        <form class="form-group">
+                            <div class="row justify-content-center">
+                                <div class="col">
+                                    <label for="usuarioWeb">Correo</label>
+                                    <h6 type="text" class="card-title">{{userInfo.information.correo}}</h6>
+                                </div>
+                                <div class="col">
+                                    <label for="usuarioWeb">Pais</label>
+                                    <h6 type="text" class="card-title">{{userInfo.information.pais}}</h6>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row justify-content-center">
+                                <div class="col">
+                                    <label for="password">Nombre Completo</label>
+                                    <h6 type="text" class="card-title">{{userInfo.information.nombre}}</h6>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row justify-content-center">
+                                <div class="col">
+                                    <label for="password">Area</label>
+                                    <h6 type="text" class="card-title">{{userInfo.information.area}}</h6>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row justify-content-center">
+                                <div class="col">
+                                    <label for="exampleFormControlTextarea1">Titulos</label>
+                                    <h6 type="text" class="card-title">{{userInfo.information.titulos}}</h6>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row justify-content-center">
+                                <div class="col">
+                                    <label for="lenguajes">Lenguajes</label>
+                                    <h6 type="text" class="card-title">{{userInfo.information.lenguajes}}</h6>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row justify-content-center">
+                                <div class="col">
+                                    <label for="exampleFormControlTextarea1">Idiomas</label>
+                                    <h6 type="text" class="card-title">{{idiomasText}}</h6>
+                                </div>
+                            </div>
+                            <br>        
+                            <div class="form-group col-3 mx-auto">
+                                <button class="btn submit_btn" (click)="goBack()">Regresar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--Paginación-->
+    <div class="pagination justify-content-center">
+        <pagination-controls class="my-pagination"
+        (pageChange)="currentPg = $event"
+        previousLabel="Atrás"
+        nextLabel="Siguiente"></pagination-controls>
+    </div>
+
+</body>
+
+</html>

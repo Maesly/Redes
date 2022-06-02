@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.logo{
+    width: 170px;
+    border-radius: 5px;
+
+ 
+}
+
+.container{
+
+    width: 100%;
+    height: 100vh;
+}
+
+
+.navbar{
+
+    padding: 10px 10px;
+    background-color: rgb(44, 43, 43);
+    color: #d5d5d5;
+}
+
+#logout{
+    font-family: 'Crete Round', serif;
+}
+
+.navbar ul li{
+
+    list-style: none;
+    margin: 0px 20px;
+    
+}
+
+.modal-dialog{
+    margin: auto;
+    
+}
+
+.modal-content{
+    
+    background-color: rgb(238, 236, 236);
+    height: 150px;
+    font-family: Roboto, "sans-serif";
+    font-size: 1.4rem;
+    color: rgb(0, 0, 0);
+    padding: 10px 10px;
+    box-shadow: 0px 0px 20px 1px #4b4b4b;
+    
+}
+
+
+.navbar ul li a{
+
+    text-decoration: none;
+    color: white;
+    font-family: Roboto, "sans-serif";
+    font-size: 1.4rem;
+}
+
+.btn{
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 100px;
+    background: #f1ee23d2;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background: #07ffea9a;
+    color: #000;
+}
+
+.btnm{
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 90px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.btnm:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 1px #7d9ca8;
+    
+}
+
+.appName{
+    font-family: 'Courgette', cursive;
+    color: #0b7e6b;
+}
